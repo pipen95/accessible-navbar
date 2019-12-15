@@ -1,10 +1,4 @@
-/*
- treeMenu - jQuery plugin
- version: 0.6
 
- Copyright 2014 Stepan Krapivin
-
-*/
 (function($) {
   $.fn.treemenu = function(options) {
     options = options || {};

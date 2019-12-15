@@ -1,3 +1,20 @@
+
+/* Variables */
+:root {
+    --color-primary: #003366;
+    --color-primary-b: #FF9B00;
+  
+    --color-secondary: #2B5580;
+    --color-secondary-b: #FFCD80;
+  
+    --color-tertiary: #67A3D2;
+    --color-tertiary-b: #FFDEAA;
+  
+    --color-grey: #8099B3;
+    --color-grey-light: #D5DDE6;
+  
+  }
+
 /* For jquery.treemenu.js */
 .treemenu li { list-style: none; }
 .treemenu .toggler { cursor: pointer; }
@@ -7,7 +24,8 @@ li.tree-empty > .toggler:before { content: "\2212"; }
 li.tree-closed > .toggler:before { content: "+"; }
 li.tree-opened > .toggler:before { content: "\2212"; }
 
-.mytree { color:#46CFB0; background-color: #34495E;}
+.mytree { color:#46CFB0; } 
+/* background-color: #34495E; */
 .mytree li,
 .mytree li > a,
 .mytree li > span {
@@ -16,19 +34,19 @@ li.tree-opened > .toggler:before { content: "\2212"; }
 }
 
 .mytree li a {
-   color:#46CFB0;
+   color: white;
     text-decoration: none;
     line-height: 20pt;
     border-radius: 4px;
 }
 
-.mytree li a:hover {
-    background-color: #34BC9D;
-    color: #fff;
+.mytree li a:hover, .mytree li a:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-primary-b);
 }
 
 .active {
-    background-color: #34495E;
+    /* background-color: #34495E; */
     color: white;
 }
 
@@ -37,7 +55,7 @@ li.tree-opened > .toggler:before { content: "\2212"; }
 }
 
 .mytree li a.active:hover {
-    background-color: #34BC9D;
+    /* background-color: #34BC9D; */
 }
 
 
