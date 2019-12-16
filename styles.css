@@ -1,17 +1,7 @@
 /* Variables */
 :root {
   --color-primary: #104670;
-  --color-primary-b: #FF9B00;
-
-  --color-secondary: #2B5580;
-  --color-secondary-b: #FFCD80;
-
-  --color-tertiary: #67A3D2;
-  --color-tertiary-b: #FFDEAA;
-
-  --color-grey: #8099B3;
-  --color-grey-light: #D5DDE6;
-
+  --color-primary-b: #ff9b00;
 }
 
 /* General */
@@ -27,7 +17,6 @@ header {
   height: 100px;
   width: 100%;
   background-color: rgb(223, 103, 48);
-  /* position: sticky;  */
   top: 0;
 }
 
@@ -35,22 +24,14 @@ footer {
   height: 50px;
   background-color: rgb(40, 119, 184);
   height: 100px;
-  /* margin-top: auto; */
-  /* margin-top: 50px; */
-  /* position: sticky; */
-  /* bottom: 0; */
 }
-
 
 .wrapper {
   display: flex;
- 
 }
 
 .content {
   margin-top: 100px;
-  /* width: 40vw; */
-  /* align-self: center; */
   margin-right: 10vw;
 }
 
@@ -62,7 +43,7 @@ nav {
   bottom: 0;
   height: 100vh;
   align-self: flex-start;
-  flex:1;
+  flex: 1;
   overflow: auto;
   background: var(--color-primary);
   width: 400px;
@@ -76,197 +57,4 @@ nav {
 main {
   display: flex;
   flex: 0 1 50%;
-  /* overflow: auto; */
 }
-
-/* Icons */
-/* .box{
-  display: flex;
-  justify-content: space-between;
-  align-self: center;
-}
-
-.title-box{
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.icon {
-  fill: var(--color-5);
-  height: 20px;
-  width: 20px;
-  margin-right: 10px;
-}
-
-icon :hover,
-icon :focus {
-  fill: var(--color-4);
-  cursor: pointer;
-} */
-
-/* NAVI */
-
-
-
-/* END NAVI */
-
-
-/*-------- Sidebar Accordion --------*/
-
-
-/* *
-h3 {
-  color: black;
-  font-size: 13px;
-  text-transform: uppercase;
-  font-family: "Lato";
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.white {
-  color: white;
-}
-
-
-
-/* 
-.sb-accordion {
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  bottom: 0;
-  align-self: flex-start;
-  height: 100vh;
-  overflow: scroll;
-  background: #38415b;
-  max-width: 30vw;
-  min-width: 250px;
-  padding-top: 50px;
-  margin-right: 10vw;
-  padding-right: 20px;
-  padding-bottom: 50px;
-}
-
-.sb-accordion h3 {
-  padding: 13px 35px;
-}
-
-.sb-accordion-category {
-  list-style: none;
-}
-
-.sb-accordion-category * {
-  list-style: none;
-  color: #b5b9c2;
-  text-decoration: none;
-  width: 100%;
-  display: block;
-}
-
-.sb-accordion label {
-  width: calc(100% + 9px);
-  cursor: pointer;
-}
-
-.sb-accordion input[type="checkbox"] {
-  display: none;
-}
-
-.sb-accordion input[type="checkbox"] + img + span,
-.sb-accordion input[type="checkbox"] + span,
-.sb-accordion label + ul li {
-  padding: 14px 0px 14px 35px;
-  height: 16px;
-  letter-spacing: 1px;
-  background: none;
-  -webkit-box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 0);
-  -moz-box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 0);
-  box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 0);
-  width: calc(100% - 44px);
-  transition: 1s all;
-  font-size: 13px;
-}
-
-.sb-accordion label + ul {
-  position: relative;
-}
-
-.sb-accordion label + ul li {
-  -webkit-box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 1);
-  -moz-box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 1);
-  box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 1);
-  font-size: 12px;
-  padding-left: 75px;
-  position: relative;
-  background: #172140;
-  width: calc(100% - 75px);
-  height: 17px;
-}
-
-.sb-accordion label + ul:before {
-  width: 1px;
-  height: calc(100% - 22px);
-  top: 0px;
-  left: 36px;
-  background: #38415b;
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: 1;
-}
-
-.sb-accordion label + ul li:before {
-  width: 20px;
-  height: 1px;
-  top: 22px;
-  left: 36px;
-  background: #38415b;
-  display: block;
-  content: "";
-  position: absolute;
-}
-
-.sb-accordion label + ul li:after {
-  width: 5px;
-  height: 5px;
-  top: 20px;
-  left: 54px;
-  background: #38415b;
-  display: block;
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-}
-
-.sb-accordion label + ul li.sb-active a {
-  color: white;
-}
-
-.sb-accordion label + ul li.sb-active:after {
-  background: #04b3e9;
-  width: 7px;
-  height: 7px;
-  margin-top: -1px;
-  margin-left: -1px;
-}
-
-.sb-accordion label > input[type="checkbox"]:checked + img + span,
-.sb-accordion label > input[type="checkbox"]:checked + span {
-  background-color: #172140;
-  color: #04b3e9;
-  padding: 14px 0 14px 35px;
-  padding-left: 35px;
-  width: calc(100% - 45px);
-  -webkit-box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 1);
-  -moz-box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 1);
-  box-shadow: inset 6px 0px 0px 0px rgba(4, 179, 233, 1);
-}
-
-.sb-accordion input[type="checkbox"]:checked + img {
-  background-color: #172140;
-  width: 0;
-  display: none;
-}  */

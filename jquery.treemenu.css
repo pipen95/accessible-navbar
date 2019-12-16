@@ -1,84 +1,108 @@
-
 /* Variables */
 :root {
-    --color-primary: #003366;
-    --color-primary-b: #FF9B00;
-  
-    --color-secondary: #2B5580;
-    --color-secondary-b: #FFCD80;
-  
-    --color-tertiary: #67A3D2;
-    --color-tertiary-b: #FFDEAA;
-  
-    --color-grey: #8099B3;
-    --color-grey-light: #D5DDE6;
-  
-  }
+  --color-primary-b: #ff9b00;
+}
 
 /* For jquery.treemenu.js */
-.treemenu li { list-style: none; }
-.treemenu .toggler { cursor: pointer; }
-.treemenu .toggler:before { display: inline-block; margin-right: 2pt; color: #aaa;}
-li.tree-empty > .toggler { opacity: 0.8; cursor: default; color: #aaa;}
-li.tree-empty > .toggler:before { content: "\2212"; }
-li.tree-closed > .toggler:before { content: "+"; }
-li.tree-opened > .toggler:before { content: "\2212"; }
+.treemenu li {
+list-style: none;
+position: relative;
+list-style: none;
+  
+}
 
-.mytree { color:#46CFB0; } 
-/* background-color: #34495E; */
+li.tree-closed > .toggler:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  width: 2px;
+  left: 49%;
+  top: 5px;
+  bottom: 5px;
+  bottom: 5px;
+  border-radius: 3px;
+  z-index: 9;
+}
+
+li.tree-closed > .toggler:before, li.tree-opened > .toggler:before  {
+  content: " ";
+  position: absolute;
+  display: block;
+  background-color: #fff;
+  height: 2px;
+  top: 48%;
+  bottom: 50%;
+  left:5px;
+  right: 5px;
+  border-radius: 3px;
+  z-index: 9;
+}
+
+.mytree {
+  color: #46cfb0;
+}
 .mytree li,
 .mytree li > a,
-.mytree li > span {
-    padding: 4pt;
-    border-radius: 4px;
+.mytree li > button {
+  padding: 10px;
+  border-radius: 100px;
 }
 
 .mytree li a {
-   color: white;
-    text-decoration: none;
-    line-height: 20pt;
-    border-radius: 4px;
+  color: white;
+  line-height: 20pt;
+  border-radius: 4px;
 }
 
-.mytree li a:hover, .mytree li a:focus {
-    background-color: var(--color-secondary);
-    color: var(--color-primary-b);
+.mytree li a:hover,
+.mytree li a:focus {
+  color: var(--color-primary-b);
 }
 
 .active {
-    /* background-color: #34495E; */
-    color: white;
+  /* background-color: #34495E; */
+  color: white;
 }
 
 .active a {
-    color: #fff;
+  color: #fff;
 }
 
 .mytree li a.active:hover {
-    /* background-color: #34BC9D; */
+  /* background-color: #34BC9D; */
 }
-
 
 /* For treemenu.js */
 
-.tree li {list-style: none;}
-
-.toggler {
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    cursor: default;
-    font-size: 0.8em;
-    text-align: center;
-    padding: 0.1em;
-    margin-left: -1.4em;
-    margin-right: 0.6em;
-    border: 0.1em solid transparent;
-    border-radius: 50%;
+button.toggler {
+  position: absolute;
+  transform: translateX(-80%);
+  top:10px;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
-li.tree-opened > .toggler:hover,
-li.tree-closed > .toggler:hover {
-    border-color: #aaa;
-    cursor: pointer;
+li.tree-opened  .toggler:hover,
+li.tree-closed .toggler:hover,
+li.tree-opened .toggler:focus, 
+li.tree-closed .toggler:focus,
+li.tree-opened  .toggler:hover:after,
+li.tree-opened  .toggler:hover:before,
+li.tree-closed .toggler:focus,
+
+
+ {
+  border-color: var(--color-primary-b);
+  cursor: pointer;
 }
+
+li.tree-empty > button {
+  display: none;
+}
+

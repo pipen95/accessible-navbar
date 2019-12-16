@@ -8,7 +8,6 @@
     options.activeSelector = options.activeSelector || "active";
 
     this.addClass("treemenu");
-
     if (!options.nonroot) {
       this.addClass("treemenu-root");
     }
@@ -18,13 +17,13 @@
     this.find("> li").each(function() {
       e = $(this);
       var subtree = e.find('> ul');
-      var button = e.find('.toggler').eq(0);
+      var button = e.find('.toggler').slice(0, 2);
 
       if (button.length == 0) {
         // create toggler
-        var button = $('<span>');
+        var button = $('<button>');
         button.addClass('toggler');
-        e.prepend(button);
+        e.prepend(button).eq(0);
       }
 
       if (subtree.length > 0) {
