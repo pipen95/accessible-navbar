@@ -43,11 +43,12 @@ li.tree-closed > .toggler:before, li.tree-opened > .toggler:before  {
   color: #46cfb0;
 }
 .mytree li,
-.mytree li > a,
+
 .mytree li > button {
   padding: 10px;
   border-radius: 100px;
 }
+
 
 .mytree li a {
   color: white;
@@ -88,15 +89,10 @@ button.toggler {
   background-color: transparent;
 }
 
-li.tree-opened  .toggler:hover,
+li.tree-opened .toggler:hover,
 li.tree-closed .toggler:hover,
 li.tree-opened .toggler:focus, 
-li.tree-closed .toggler:focus,
-li.tree-opened  .toggler:hover:after,
-li.tree-opened  .toggler:hover:before,
-li.tree-closed .toggler:focus,
-
-
+li.tree-closed .toggler:focus 
  {
   border-color: var(--color-primary-b);
   cursor: pointer;
@@ -106,3 +102,20 @@ li.tree-empty > button {
   display: none;
 }
 
+
+li.tree-opened .toggler:hover:before,
+li.tree-opened .toggler:hover:after,
+li.tree-closed .toggler:hover:after,
+li.tree-closed .toggler:hover:before,
+li.tree-opened .toggler:focus:before,
+li.tree-opened .toggler:focus:after,
+li.tree-closed .toggler:focus:after,
+li.tree-closed .toggler:focus:before
+
+{
+  background-color: var(--color-primary-b);
+} 
+
+.treemenu {
+  padding-left: 10px !important;
+}
