@@ -60,18 +60,18 @@ li.tree-closed > .toggler:before, li.tree-opened > .toggler:before  {
 .mytree li a:focus {
   color: var(--color-primary-b);
 }
-
+/* 
 .active {
-  /* background-color: #34495E; */
-  color: white;
-}
+  background-color: #34495E;
+  color: var(--color-primary-b);
+} */
 
-.active a {
-  color: #fff;
+.active > a {
+  color: var(--color-primary-b);
 }
 
 .mytree li a.active:hover {
-  /* background-color: #34BC9D; */
+  background-color: #34BC9D;
 }
 
 /* For treemenu.js */
@@ -119,3 +119,8 @@ li.tree-closed .toggler:focus:before
 .treemenu {
   padding-left: 10px !important;
 }
+
+
+
+
+

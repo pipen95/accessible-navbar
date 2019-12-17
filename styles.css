@@ -13,6 +13,10 @@ html {
   font-family: "Lato";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   height: 100px;
   width: 100%;
@@ -26,9 +30,9 @@ footer {
   height: 100px;
 }
 
-.wrapper {
+/* .wrapper {
   display: flex;
-}
+} */
 
 .content {
   margin-top: 100px;
@@ -36,17 +40,10 @@ footer {
 }
 
 nav {
-  display: flex;
-  flex-direction: column;
-  position: sticky;
-  top: 0;
-  bottom: 0;
+
   height: 100vh;
   align-self: flex-start;
-  flex: 1;
-  overflow: auto;
   background: var(--color-primary);
-  width: auto;
   min-width: 300px;
   padding-top: auto;
   margin-right: 10vw;
@@ -55,6 +52,52 @@ nav {
   padding-bottom: auto;
 }
 
-main {
-  display: flex;
+
+
+
+
+/* Sidebar Toggle  */
+
+.nav-wrapper {
+  flex-direction: column;
+  position: fixed;
+  top:0;
+  }
+
+.sidebar {
+  width: 0px;
+  overflow:hidden;
+  -webkit-transition: width 0.3s;
+  -moz-transition: width 0.3s;
+  -ms-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.sidebar ul {
+  width: 300px;
+}
+.sidebar.open {
+  width: 300px;
+}
+
+
+button.show{
+  display:block;
+
+  border: 1px solid black;
+  
+}
+
+button.show:hover{
+  cursor: pointer;
+}
+
+button.show a {
+  border-radius: 4px;
+}
+
+button.show a:hover,
+button.show a:focus {
+  color: var(--color-primary-b);
 }
